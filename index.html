@@ -69,7 +69,8 @@
 
       var marker = L.marker([row.latitude, row.longitude], {
         opacity: 1
-      }).bindPopup(row.geographic_location, row.related_event, row.mention_text, row.issue_date);
+      }).bindPopup(row.geographic_location)
+      .bindPopup(row.related_event, row.mention_text, row.issue_date);
       
       marker.addTo(map);
     }
